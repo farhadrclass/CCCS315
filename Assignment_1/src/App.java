@@ -28,6 +28,6 @@ public class App {
          System.out.println(myArr[ myArr.length-1]); // printing last element, not the biggest or smallest but just the last one
          //now we find the minimum calling the function you wrote:
          indexMin=minFinder(myArr);
-         System.out.println("The minimum is at location: "+indexMin+" The value is: "+myArr[indexMin]); // printing each array element, not the biggest or smallest but just the last one
+         System.out.println("The minimum is at location: "+indexMin+" The value is: "+myArr[indexMin]); 
     }
 }
