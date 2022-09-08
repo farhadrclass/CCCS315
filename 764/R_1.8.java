@@ -1,7 +1,9 @@
+/*
+Write a short Java method that counts the number of vowels in a given character string.
+*/
+
 import java.util.Scanner;
-/**
- * practice764
- */
+
 public class practice764 {
 
     public static void main(String[] args) {
