@@ -16,14 +16,14 @@ public class MyLinkedList { // this linkedlist expectd int type
      * 
      * @param item
      */
-    static void add(int item ) {
+    static void add(int item) {
         // Allocate dynamic memory for newNode.
         Node newNode = new Node();
         // add the item to the head of our linked list
         newNode.item = item;
         newNode.next = head;
         head = newNode;
-        
+
     }
 
     /**
@@ -51,8 +51,10 @@ public class MyLinkedList { // this linkedlist expectd int type
         }
     }
 
-    //Next two methods are identical, however when useing a local variable name that matches the name in class 
-    // attributes, the local value takes priority over so at the end we do not actually change the class level head but a local copy of it 
+    // Next two methods are identical, however when useing a local variable name
+    // that matches the name in class
+    // attributes, the local value takes priority over so at the end we do not
+    // actually change the class level head but a local copy of it
     static void printer(Node head) {
         while (head != null) {
             System.out.print(head.item + "->");
@@ -61,10 +63,10 @@ public class MyLinkedList { // this linkedlist expectd int type
         System.out.println();
     }
     // static void printer(Node Buffer) {
-    //     while (Buffer != null) {
-    //         System.out.print(Buffer.item + "->");
-    //         Buffer = Buffer.next;
-    //     }
+    // while (Buffer != null) {
+    // System.out.print(Buffer.item + "->");
+    // Buffer = Buffer.next;
+    // }
     // }
 
     // Function that returns the largest element
@@ -81,9 +83,10 @@ public class MyLinkedList { // this linkedlist expectd int type
         return max;
     }
 
-    //TODO remove from head
-    //TODO remove from tail
-    //TODO remove if the value matches something like 222 (Kinda like removing from middle)
+    // TODO remove from head
+    // TODO remove from tail
+    // TODO remove if the value matches something like 222 (Kinda like removing from
+    // middle)
     public static void main(String[] args) {
         // Add to the head
         add(125);
