@@ -8,6 +8,7 @@ public class MyLinkedList { // this linkedlist expectd int type
     }
 
     static Node head = null;
+    // static int size=0;
     // Function that add the element in linked list.
 
     /**
@@ -22,6 +23,7 @@ public class MyLinkedList { // this linkedlist expectd int type
         newNode.item = item;
         newNode.next = head;
         head = newNode;
+        
     }
 
     /**
@@ -56,6 +58,7 @@ public class MyLinkedList { // this linkedlist expectd int type
             System.out.print(head.item + "->");
             head = head.next;
         }
+        System.out.println();
     }
     // static void printer(Node Buffer) {
     //     while (Buffer != null) {
@@ -78,23 +81,37 @@ public class MyLinkedList { // this linkedlist expectd int type
         return max;
     }
 
-    // TODO remove from head
+    //TODO remove from head
     //TODO remove from tail
     //TODO remove if the value matches something like 222 (Kinda like removing from middle)
     public static void main(String[] args) {
         // Add to the head
         add(125);
+        printer(head);
+
         add(114);
+        printer(head);
+
         add(1212);
+        printer(head);
+
         add(222);
+        printer(head);
+
         add(17);
         // printer(head);
+        printer(head);
 
         // Add to the tail
         addTail(1000);
+        printer(head);
+
         addTail(1100);
+        printer(head);
         addTail(2000);
+        printer(head);
         addTail(3000);
+        printer(head);
         addTail(4000);
         printer(head);
 
