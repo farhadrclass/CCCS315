@@ -62,20 +62,20 @@ public class MyLinkedListTues {
     // that matches the name in class
     // attributes, the local value takes priority over so at the end we do not
     // actually change the class level head but a local copy of it
-    // static void printer(Node head) {
-    // while (head != null) {
-    // System.out.print(head.item + "->");
-    // head = head.next;
-    // }
-    // System.out.println();
-    // }
-    static void printer(Node buffer) {
-        while (buffer != null) {
-            System.out.print(buffer.item + "->");
-            buffer = buffer.next;
+    static void printer(Node head) {
+        while (head != null) {
+            System.out.print(head.item + "->");
+            head = head.next;
         }
         System.out.println();
     }
+    // static void printer(Node buffer) {
+    // while (buffer != null) {
+    // System.out.print(buffer.item + "->");
+    // buffer = buffer.next;
+    // }
+    // System.out.println();
+    // }
 
     /**
      * This method prints a linked list WITH deleting it (this does it in loop ,
@@ -92,15 +92,17 @@ public class MyLinkedListTues {
 
     // Function that returns the largest element
 
-    // the catch here I have an argument called head so it actually acts like a buffer 
+    // the catch here I have an argument called head so it actually acts like a
+    // buffer
     public static int bigVal(Node head) {
-        // MyLinkedListTues.head  // When you have a local valu and global value with same name you need to differentiate them 
+        // MyLinkedListTues.head // When you have a local valu and global value with
+        // same name you need to differentiate them
 
         // small value or the first value of the head
         int max = Integer.MIN_VALUE;
         // Check loop while head not equal to NULL
         while (head != null) {
-            if (max < head.item){ //only update the max when a value larger shows up
+            if (max < head.item) { // only update the max when a value larger shows up
                 max = head.item;
             }
             head = head.next;
@@ -109,13 +111,12 @@ public class MyLinkedListTues {
         return max;
     }
 
-
     public static void main(String[] args) {
 
         // Add to the head
 
         add(125);
-        printer(head);       
+        printer(head);
 
         add(114);
         printer(head);
@@ -128,7 +129,6 @@ public class MyLinkedListTues {
         printer(head);
 
         // printerDel(); // it deleted my whole LinkedList
-
 
         // Add to the tail
         addTail(1000);
@@ -145,7 +145,10 @@ public class MyLinkedListTues {
 
         System.out.print("\nMaximum item is: ");
         System.out.println(bigVal(head));
-        
+
+        // printer(head);
+        printerDel();
+        printer(head);
         System.out.println("end of the code,");
 
     }
