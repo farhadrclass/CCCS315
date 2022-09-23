@@ -41,12 +41,12 @@ public class App {
     // }
 
     public static int f_Rec(int n) {
-        System.out.println("I put the print here  "+n);
+        // System.out.println("I put the print here  "+n);
         if (n <= 0){
             return 1;
         }
         int myReturn = f_Rec(n-1); //This is for student to understand how the f_Rec call are done
-        System.out.println("I put the print After thec call  "+n);
+        // System.out.println("I put the print After thec call  "+n);
 
         return n*myReturn;
     }
@@ -86,3 +86,4 @@ public class App {
 
     }
 }
+
