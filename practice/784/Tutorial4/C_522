@@ -1,0 +1,31 @@
+public class C_522 {
+
+    static void FindPair(int[] data, int k, int low, int high) {
+        if (low < high) {
+            if (data[low] + data[high] < k) { // See if A[i] + A[j] < k
+                FindPair(data, k, low + 1, high); // Check for A[i+1,...,j]
+
+            } else if (data[low] + data[high] > k) { // See if A[i] + A[j] > k
+                FindPair(data, k, low, high - 1); // Check for A[i,...,j-1]
+
+            }
+        }
+        if (data[low] + data[high] == k) {//If a pair is found that A[i] + A[j] = k then print them
+            System.out.println(data[low] + " and " + data[high]);
+        } else if (low == high) {//If i=j , means the code searched the array and there was no match.
+            System.out.println("No match for " + k);
+        }
+    }
+
+    static void FindPair(int[] data, int k) {
+        FindPair(data, k, 0, data.length - 1);
+    }
+
+    public static void main(String[] args) {
+        int A[] = { 1, 2, 3, 4, 5, 6, 7, 10, 15 };
+
+        FindPair(A, 15);
+
+    }
+
+}
