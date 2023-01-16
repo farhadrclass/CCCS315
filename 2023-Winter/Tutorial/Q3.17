@@ -1,0 +1,23 @@
+public class C317 {
+
+    public static int missing(int[] A) {
+        boolean[] found = new boolean[A.length]; // false, by default
+        for (int val : A)
+            if (found[val])
+                return val;
+            else
+                found[val] = true;
+        return -1; // shouldn't happen if input as expected
+    }
+
+    public static void main(String[] args) {
+        int[] A = { 1, 2, 3, 4, 6, 1, 5 };
+        int repeatedValue = missing(A);
+
+        if (repeatedValue != -1)
+            System.out.println("The repeated number is: " + repeatedValue);
+        else
+            System.out.println("You cannot have 0 in the array.");
+
+    }
+}
