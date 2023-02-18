@@ -1,0 +1,48 @@
+public Position<E> addLast(E e) {
+    if (isEmpty())
+        return addFirst(e);
+    else
+        return addAfter(last(), e);
+}
+
+public Position<E> addBefore(Position<E> p, E e){
+    if (p == first())
+        return addFirst(e);
+    else
+        return addAfter(before(p) - 1, e)
+}
+
+Question 12:
+
+public int indexOf(Position<E> p){
+    int count;
+    Position<E> walk = first();
+
+    while(walk != p){
+        count ++;
+        walk = after(walk)
+    }
+
+    return count;
+}
+
+Question 18:
+
+size = A.length();
+
+public boolean contains(Object o){
+    for(int k = 0, k < size, k++){
+        if (data[k].eqauls(o))
+             return true:
+    }
+
+    return False;
+}
+
+Question 19:
+
+public void clear(){
+    for(int k = 0, k < size, k++)
+        data[k] = null;
+    size = 0;
+}
